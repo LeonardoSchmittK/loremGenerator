@@ -1,0 +1,271 @@
+@-webkit-keyframes popUpPanel {
+  0% {
+    opacity: 0;
+    -webkit-filter: drop-shadow(0 130px 110px #007bff);
+            filter: drop-shadow(0 130px 110px #007bff);
+  }
+  100% {
+    opacity: 1;
+    -webkit-filter: none;
+            filter: none;
+  }
+}
+
+@keyframes popUpPanel {
+  0% {
+    opacity: 0;
+    -webkit-filter: drop-shadow(0 130px 110px #007bff);
+            filter: drop-shadow(0 130px 110px #007bff);
+  }
+  100% {
+    opacity: 1;
+    -webkit-filter: none;
+            filter: none;
+  }
+}
+
+::-webkit-scrollbar {
+  width: .5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #007bff6e;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffff;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 0;
+  padding: 0;
+}
+
+.container {
+  height: 500px;
+  background: transparent;
+  border-radius: 20px;
+  margin-top: 5rem;
+  -webkit-box-shadow: 0 0 20px rgba(128, 128, 128, 0.596);
+          box-shadow: 0 0 20px rgba(128, 128, 128, 0.596);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container span {
+  background: inherit;
+  -webkit-box-shadow: 0 0 20px rgba(128, 128, 128, 0.596);
+          box-shadow: 0 0 20px rgba(128, 128, 128, 0.596);
+  font-weight: 900;
+}
+
+.container header {
+  margin-left: 6.3rem;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  width: auto;
+  height: 60px;
+  background: #ffffff;
+  -webkit-box-shadow: 1px 23px 2px #d0d0e9;
+          box-shadow: 1px 23px 2px #d0d0e9;
+  margin-top: -5rem;
+}
+
+.container header i {
+  vertical-align: middle;
+  font-size: 2rem;
+}
+
+.container header h1 {
+  letter-spacing: .1rem;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 4.6rem;
+}
+
+.container .inputUser {
+  margin-top: 1rem;
+  width: auto;
+  height: auto;
+  padding: 6rem 2rem;
+  border-radius: 10px;
+  font-family: Montserrat;
+  -webkit-box-shadow: 0 0 20px rgba(128, 128, 128, 0.596);
+          box-shadow: 0 0 20px rgba(128, 128, 128, 0.596);
+}
+
+.container .inputUser form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+.container .inputUser form label {
+  letter-spacing: .1rem;
+  color: #14141465;
+  padding-left: 2rem;
+  font-weight: 900;
+  font-size: 3rem;
+}
+
+.container .inputUser form input {
+  margin-left: 1rem;
+  height: 6rem;
+  width: 14%;
+  border: none;
+  text-align: center;
+  outline: none;
+  padding: 2rem 0;
+  border-radius: 50%;
+  padding-left: 12px;
+  color: #14141465;
+  -webkit-box-shadow: 0 0 20px rgba(128, 128, 128, 0.596);
+          box-shadow: 0 0 20px rgba(128, 128, 128, 0.596);
+  font-size: 3rem;
+}
+
+.container .inputUser form input:focus {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.container .inputUser form input:in-range {
+  color: #1b1a1a;
+}
+
+.container .inputUser form button {
+  position: absolute;
+  bottom: -8.3rem;
+  padding: 1.4rem;
+  color: #fff;
+  border-bottom: 7px solid #fff;
+  outline: none;
+  border-radius: 10px;
+  text-transform: uppercase;
+  -webkit-transition: .1s linear;
+  transition: .1s linear;
+  z-index: 99;
+  font-size: 2rem;
+}
+
+.container .inputUser form button:hover {
+  bottom: -7.6rem;
+  -webkit-transition: .1s;
+  transition: .1s;
+}
+
+.container .loremPanel {
+  display: none;
+  width: 60vw;
+  height: auto;
+  top: 204px;
+  position: absolute;
+  background: -webkit-gradient(linear, left top, left bottom, from(#007bff6b), color-stop(20%, #ffffff));
+  background: linear-gradient(#007bff6b, #ffffff 20%);
+  border-top: 4px solid #007bff;
+  z-index: 9;
+  padding: 5rem 3rem;
+  -webkit-animation: popUpPanel 1s;
+          animation: popUpPanel 1s;
+  -webkit-box-shadow: 0 0 20px rgba(128, 128, 128, 0.596);
+          box-shadow: 0 0 20px rgba(128, 128, 128, 0.596);
+}
+
+.container .loremPanel p {
+  font-size: 1rem;
+  text-transform: capitalize;
+  line-height: 1.7rem;
+}
+
+footer {
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  cursor: pointer;
+}
+
+footer a {
+  color: #14141465;
+}
+
+footer a:hover {
+  text-transform: none;
+  text-decoration: none;
+  color: #14141465;
+}
+
+@media only screen and (max-width: 1010px) {
+  .inputUser form label {
+    font-size: 3rem;
+    padding-left: 0rem;
+  }
+  .inputUser form input {
+    font-size: 50px;
+    height: auto;
+    width: auto;
+  }
+  .loremPanel {
+    position: relative;
+    margin-top: 200px;
+  }
+  .loremPanel p {
+    font-size: 1px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container header {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    margin-left: -.5rem;
+  }
+  .container header h1 {
+    width: 100%;
+    font-size: 3rem;
+  }
+  .container .inputUser form label {
+    padding-left: 0;
+    font-size: 3rem;
+  }
+  .container .inputUser form input {
+    font-size: 3rem;
+    height: auto;
+    width: auto;
+    margin: auto;
+  }
+  .container .loremPanel {
+    position: absolute;
+    top: 230px;
+    padding: 1.3rem;
+  }
+  .container .loremPanel p {
+    font-size: .8rem;
+    line-height: 1.4rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */

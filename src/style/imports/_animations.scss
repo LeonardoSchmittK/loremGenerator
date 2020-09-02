@@ -1,0 +1,23 @@
+@keyframes popUpPanel{
+  0%{
+    opacity: 0; 
+    filter:drop-shadow(0 130px 110px #007bff );
+  } 
+  100%{
+   opacity: 1; 
+   filter:none;
+  }
+} 
+
+::-webkit-scrollbar{
+  width:.5rem;  
+} 
+
+::-webkit-scrollbar-thumb{
+  background:#007bff6e;
+  border-radius:10px; 
+} 
+::-webkit-scrollbar-track{
+ background:#ffff; 
+} 
+

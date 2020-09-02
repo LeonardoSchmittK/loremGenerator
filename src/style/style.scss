@@ -1,0 +1,196 @@
+@import './imports/functions';
+@import './imports/variables';
+@import './imports/animations';
+@import './imports/presets'; 
+
+.container{
+  height:500px; 
+  background:transparent; 
+  border-radius: 20px;
+  margin-top:5rem; 
+    @include box-shadow(mild);
+    @include flexCenter;
+   span{
+     background:inherit; 
+       @include box-shadow(mild); 
+       @include font-weight(bold)
+   }
+   header{ 
+    margin-left:6.3rem;
+    align-self:flex-start;
+    width:auto; 
+    height: 60px;
+    background:$mainColor;  
+    box-shadow:1px 23px 02px rgb(208, 208, 233);; 
+    margin-top:-5rem;  
+
+    i{
+      vertical-align: middle; 
+        @include fontSize(d); 
+     }
+    h1{
+
+     letter-spacing: .1rem; 
+     color:$mainFontColor; 
+     border-radius:10px;  
+       @include fontSize(title);
+    }
+   }
+   
+   .inputUser{ 
+     margin-top:1rem;
+     width: auto; 
+     height: auto; 
+     padding:6rem 2rem;
+     border-radius:10px;
+     font-family:$mainFontFamily; 
+        @include box-shadow(mild);
+
+      form{
+        @include flexCenter;
+        position: relative;
+
+       label{
+       letter-spacing: .1rem;
+       color:$fourthFontColor;
+       padding-left:2rem;
+          @include font-weight(bold); 
+          @include fontSize(subtitle); 
+        
+       } 
+       input{ 
+        margin-left:1rem;
+        height:6rem;
+        width:14%;
+        border:none; 
+        text-align:center;
+        outline:none;
+        padding:2rem 0; 
+        border-radius:50%;
+        padding-left:12px;
+        color:$fourthFontColor;
+          @include box-shadow(mild); 
+          @include fontSize(subtitle); 
+          &:focus{
+            transform: scale(1.1);
+             
+          } 
+          &:in-range{
+            color:$thirFontColor;
+          } 
+       } 
+
+       button{
+        position: absolute;
+        bottom:-8.3rem;
+        padding:1.4rem;
+        color:$mainFontColor; 
+        border-bottom:7px solid $mainFontColor; 
+        outline:none; 
+        border-radius:10px; 
+        text-transform: uppercase; 
+        transition:.1s linear;
+        z-index: 99;
+          @include fontSize(d); 
+        
+         &:hover{
+           
+           bottom:-7.6rem; 
+           transition:.1s;
+         }
+       }
+      }
+   }
+   .loremPanel{ 
+    display:none;
+    width: 60vw;
+    height: auto;  
+    top:204px;
+    position: absolute;
+    background:linear-gradient(#007bff6b ,$mainColor 20%); 
+    border-top:4px solid #007bff; 
+    z-index: 9; 
+    padding:5rem 3rem; 
+    animation: popUpPanel 1s;
+      @include box-shadow(mild); 
+     p{
+       font-size:1rem; 
+       text-transform:capitalize; 
+       line-height: 1.7rem;
+     }
+   }
+} 
+
+footer{
+ writing-mode: vertical-rl; 
+ cursor:pointer; 
+
+  a{
+    color:$fourthFontColor;
+      &:hover{
+        @include formatLink;
+      }
+  }
+  
+}
+
+@media only screen and (max-width:1010px){
+
+  .inputUser{
+    form{
+  label{
+    @include fontSize(subtitle); 
+     padding-left:0rem; 
+  }
+  input{
+    font-size:50px; 
+    height:auto; 
+    width: auto;
+     }
+    }
+  }
+  .loremPanel{
+    position: relative; 
+    margin-top:200px;  
+      p{
+        font-size:1px;
+      }
+   }
+}
+
+@media only screen and (max-width:600px){
+
+    .container{ 
+      header{
+      box-shadow: none; 
+      margin-left:-.5rem; 
+        h1{ 
+          width:100%; 
+            @include fontSize(subtitle); 
+        }
+      } 
+      .inputUser{
+      form{
+      label{
+         padding-left:0; 
+           @include fontSize(subtitle); 
+      }
+      input{
+        font-size:3rem; 
+        height:auto; 
+        width: auto; 
+        margin:auto;
+      }
+     }
+    }
+    .loremPanel{
+        position: absolute; 
+        top:230px;
+        padding:1.3rem;
+          p{
+            font-size:.8rem; 
+            line-height: 1.4rem;       
+          }
+      }
+    } 
+}

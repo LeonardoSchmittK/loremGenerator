@@ -1,0 +1,45 @@
+
+@mixin flexCenter{
+  display:flex; 
+  justify-content: center; 
+  align-items: center; 
+  flex-direction:column;
+}
+
+@mixin font-weight($val){
+  @if($val==bold){
+    font-weight:900;
+  }@else if($val==mild){
+    font-weight: 300;
+  }@else{
+    font-weight:600;
+  }
+} 
+
+@mixin box-shadow($val){
+  @if($val==mild){
+  box-shadow:0 0 20px rgba(128, 128, 128, 0.596);
+
+ }@else{
+  box-shadow:0 0 50px grey;
+
+ }
+} 
+
+@mixin fontSize($val){
+  @if($val==title){
+    font-size:4.6rem;
+  } 
+  @else if($val==subtitle){
+    font-size:3rem; 
+  } 
+  @else {
+   font-size:2rem;
+  }
+}
+
+@mixin formatLink{
+    text-transform:none; 
+    text-decoration:none; 
+    color:$fourthFontColor;
+}
